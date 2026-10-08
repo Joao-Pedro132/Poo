@@ -34,7 +34,6 @@ class Celular{
     public function carregar($carga){
         if($this->taLigado == false){
             $this->taLigado == true;
-            $this->ligar();
         }
         while($this->bateria < 100){
         $this->bateria = $this->bateria + $carga;
@@ -44,6 +43,7 @@ class Celular{
         echo "Carregando: " . $this->bateria . "%<br>";
         }
         echo "Celular carregado<br>";
+        $this->ligar();
     }
 }
 
@@ -55,7 +55,13 @@ $celular1->cor = 'Preto';
 $celular1->bateria = 20;
 $celular1->taLigado = false;
 
-$celular1->user(5);
-$celular1->carregar(30);
+echo"Marca do Celular: " . $celular1->marca . "<br>";
+echo"Modelo do Celular: " . $celular1->modelo . "<br>";
+echo"Cor do Celular: " . $celular1->cor . "<br>";
+echo"Bateria do Celular: " . $celular1->bateria . "%<br>";
+echo"<br>";
 
+$celular1->ligar();
+$celular1->user(5);
+$celular1->carregar(10);
 ?>
