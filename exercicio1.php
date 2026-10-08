@@ -55,13 +55,31 @@ $celular1->cor = 'Preto';
 $celular1->bateria = 20;
 $celular1->taLigado = false;
 
-echo"Marca do Celular: " . $celular1->marca . "<br>";
-echo"Modelo do Celular: " . $celular1->modelo . "<br>";
-echo"Cor do Celular: " . $celular1->cor . "<br>";
-echo"Bateria do Celular: " . $celular1->bateria . "%<br>";
+$celular2 = new Celular();
+$celular2->marca = 'Motorola';
+$celular2->modelo = 'G20';
+$celular2->cor = 'Azul';
+$celular2->bateria = 60;
+$celular2->taLigado = false;
+
+echo"Marca do Celular 1: " . $celular1->marca . "<br>";
+echo"Modelo do Celular 1: " . $celular1->modelo . "<br>";
+echo"Cor do Celular 1: " . $celular1->cor . "<br>";
+echo"Bateria do Celular 1: " . $celular1->bateria . "%<br>";
 echo"<br>";
 
 $celular1->ligar();
 $celular1->user(5);
 $celular1->carregar(10);
+
+echo"<br>";
+echo"Marca do Celular 2: " . $celular2->marca . "<br>";
+echo"Modelo do Celular 2: " . $celular2->modelo . "<br>";
+echo"Cor do Celular 2: " . $celular2->cor . "<br>";
+echo"Bateria do Celular 2: " . $celular2->bateria . "%<br>";
+echo"<br>";
+
+$celular2->ligar();
+$celular2->user(10);
+$celular2->carregar(25);
 ?>
